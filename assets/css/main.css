@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+ @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
 
 /*
@@ -3155,6 +3155,11 @@ input, select, textarea {
 						content: '\f0c9';
 						line-height: inherit;
 					}
+					/* Media query for smaller screens (e.g., smartphones) */
+					@media screen and (max-width: 768px) {
+ 						#header nav a[href="#menu"]:before {
+    					font-size: 30px; /* Increase the size for smaller screens */}
+}
 
 					#header nav a[href="#menu"]:hover {
 						background-color: rgba(255, 255, 255, 0.025);
@@ -4113,6 +4118,40 @@ input, select, textarea {
  	margin-top: 20px;
  	max-width: 100%
 }
+/*ADJUSTING SCREEN SIZE DISPLAY FOR THE ABOUT US PAGE PARAGRPHS AND IMAGES*/
+
+	@media screen and (max-width: 768px) {
+
+	  	.content-section {
+	    display: flex; /* Use flexbox to align content */
+	    flex-direction: column; /* Stack content vertically */
+	 	 }
+
+
+	  	.building-photo ,
+		.workers-on-roof ,
+		.office-image ,
+		.big-vent-photo ,
+		.jobsite-photo ,
+		.happy-client-photo ,
+		.sustainable-energy-photo {
+		   max-width: 100%; /* Ensure images are responsive */
+		   height: auto; /* Maintain aspect ratio */
+		   margin: 0 auto; /* Center images if needed */ 
+		}
+
+		
+  		.screensize {
+  			text-align: center;
+  			font-size: 1.2rem;
+  			line-height: 1.5; 
+  		}
+}
+
+
+
+
+
 
 /* Create a grid layout for the content sections */
 
